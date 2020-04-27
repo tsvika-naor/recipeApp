@@ -55,7 +55,7 @@ router.post("/login", (req, res, next) => {
         token: token,
         expiresIn: 3600
       })
-    })
+    }).then(console.log("user is logged in!!!"))
     .catch(err => {
       return res.status(401).json({
         message: "Auth failed"
